@@ -1,6 +1,7 @@
 package com.newnius.code4hadoop.weblog;
 
 import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
 
@@ -10,9 +11,9 @@ import java.io.IOException;
  * Created by newnius on 8/11/17.
  *
  */
-public class WLMapper extends Mapper<IntWritable, Text, Text, IntWritable> {
+public class WLMapper extends Mapper<LongWritable, Text, Text, IntWritable> {
     @Override
-    protected void map(IntWritable key, Text value, Context context) throws IOException, InterruptedException {
+    protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
         String field = context.getConfiguration().get("field");
 
         String  record = value.toString();
@@ -44,7 +45,8 @@ public class WLMapper extends Mapper<IntWritable, Text, Text, IntWritable> {
                 v = items[10].replaceAll("\"", "");
                 break;
             case "ua":
-                v = record.substring(record.substring(0, record.length()-1).lastIndexOf("\"")-1);
+                v = record.substring(record.substring(0, record.length()-1).lastIndexOf("\""));
+                v = v.substring(0, v.length() - 1);
                 break;
         }
         context.write(new Text(v), new IntWritable(1));

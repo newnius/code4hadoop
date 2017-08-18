@@ -1,8 +1,6 @@
 package com.newnius.code4hadoop.co_occurrence;
 
-import com.sun.corba.se.spi.ior.Writeable;
 import org.apache.hadoop.io.WritableComparable;
-import org.omg.CORBA_2_3.portable.OutputStream;
 
 import java.io.DataInput;
 import java.io.DataOutput;

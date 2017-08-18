@@ -1,5 +1,6 @@
 package com.newnius.code4hadoop.invertedindex;
 
+import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
@@ -24,7 +25,7 @@ public class MapperTwo extends Mapper<Object, Text, Text, IntWritable> {
         URI[] uris = context.getCacheFiles();
         for(URI uri: uris){
             String line;
-            BufferedReader br = new BufferedReader(new FileReader(uri.getPath()));
+            BufferedReader br = new BufferedReader(new FileReader(new Path(uri).getName()));
             while((line = br.readLine()) != null){
                 StringTokenizer itr = new StringTokenizer(line);
                 while(itr.hasMoreTokens()){

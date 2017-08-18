@@ -12,10 +12,11 @@ import java.io.IOException;
 public class ReducerOne extends Reducer<Text, Text, Text, Text>{
     @Override
     protected void reduce(Text key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
-        String cities = "";
+        StringBuilder sb = new StringBuilder();
         for(Text value: values){
-            cities += value + ",";
+            sb.append(value).append(",");
         }
+        String cities = sb.toString();
         cities = cities.substring(0, cities.length()-1);
         context.write(key, new Text(cities));
     }

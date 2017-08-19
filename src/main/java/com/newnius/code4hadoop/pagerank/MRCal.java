@@ -12,7 +12,7 @@ import java.io.IOException;
 /**
  * Created by newnius on 8/18/17.
  *
- * bin/hadoop jar /mnt/jars/hadoop-tutorial-1.0-SNAPSHOT.jar com.newnius.code4hadoop.pagerank.MRCal pageRank/input pageRank/output
+ * bin/hadoop jar code4hadoop-1.0.jar com.newnius.code4hadoop.pagerank.MRCal pageRank/input pageRank/output
  */
 public class MRCal {
     public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {

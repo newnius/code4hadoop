@@ -12,7 +12,7 @@ import java.io.IOException;
 /**
  * Created by newnius on 8/15/17.
  *
- * bin/hadoop jar /mnt/jars/hadoop-tutorial-1.0-SNAPSHOT.jar com.newnius.code4hadoop.co_occurrence.MR co-occurrence coOccurrence/input coOccurrence/output 10
+ * bin/hadoop jar code4hadoop-1.0.jar com.newnius.code4hadoop.co_occurrence.MR co-occurrence coOccurrence/input coOccurrence/output 10
  *
  */
 public class MR {

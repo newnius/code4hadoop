@@ -12,7 +12,7 @@ import java.io.IOException;
 /**
  * Created by newnius on 8/17/17.
  *
- * bin/hadoop jar /mnt/jars/hadoop-tutorial-1.0-SNAPSHOT.jar com.newnius.code4hadoop.invertedindex.MRCal InvertedIndex inverted/input inverted/output1
+ * bin/hadoop jar code4hadoop-1.0.jar com.newnius.code4hadoop.invertedindex.MRCal InvertedIndex inverted/input inverted/output1
  */
 public class MROne {
     public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {

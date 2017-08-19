@@ -12,7 +12,7 @@ import java.io.IOException;
 
 /**
  * Created by newnius on 12/6/16.
- * call: hadoop jar hadoop-tutorial.jar MaxTemperatureWithCompression input/ncdc_data/* outputpath
+ * call: hadoop jar code4hadoop-1.0.jar com.newnius.code4hadoop.book.ch5.MaxTemperatureWithCompression input/ncdc_data/* outputpath
  */
 public class MaxTemperatureWithCompression {
     public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {

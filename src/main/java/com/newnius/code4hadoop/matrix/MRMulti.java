@@ -15,7 +15,7 @@ import java.io.IOException;
  *
  *
  *
- * bin/hadoop jar /mnt/jars/hadoop-tutorial-1.0-SNAPSHOT.jar com.newnius.code4hadoop.matrix.MRMulti matrix matrix/input matrix/output 20 30 40
+ * bin/hadoop jar code4hadoop-1.0.jar com.newnius.code4hadoop.matrix.MRMulti matrix matrix/input matrix/output 20 30 40
  *
  */
 public class MRMulti {

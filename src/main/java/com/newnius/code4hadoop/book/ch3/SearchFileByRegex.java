@@ -11,7 +11,7 @@ import java.net.URI;
 
 /**
  * Created by newnius on 12/7/16.
- * call: ./hadoop jar hadoop-tutorial-1.0-SNAPSHOT.jar SearchFileByRegex hdfs:/// /user/root/* /_SUCCESS ^.* /output0.*$
+ * call: ./hadoop jar code4hadoop-1.0.jar com.newnius.com.code4hadoop.book.ch3.SearchFileByRegex hdfs:/// /user/root/* /_SUCCESS ^.* /output0.*$
  */
 public class SearchFileByRegex {
     public static void main(String args[]) throws IOException {

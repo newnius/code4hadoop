@@ -13,7 +13,7 @@ import java.io.IOException;
 /**
  * Created by newnius on 8/19/17.
  *
- * bin/hadoop jar /mnt/jars/hadoop-tutorial-1.0-SNAPSHOT.jar com.newnius.code4hadoop.patent.MRCiteCount patent/input/cite75_99.txt patent/output_cited_count
+ * bin/hadoop jar code4hadoop-1.0.jar com.newnius.code4hadoop.patent.MRCiteCount patent/input/cite75_99.txt patent/output_cited_count
  */
 public class MRCiteCount {
     public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {

@@ -1,7 +1,6 @@
 package com.newnius.code4hadoop.co_occurrence;
 
 import org.apache.hadoop.io.IntWritable;
-import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Reducer;
 
 import java.io.IOException;

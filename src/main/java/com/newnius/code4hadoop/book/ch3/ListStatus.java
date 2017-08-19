@@ -11,7 +11,7 @@ import java.net.URI;
 
 /**
  * Created by newnius on 12/7/16.
- *  call hadoop jar hadoop-tutorial.jar ListStatus hdfs://localhost/ hdfs://localhost/user/root
+ *  call hadoop jar code4hadoop-1.0.jar com.newnius.code4hadoop.book.ch3.ListStatus hdfs://localhost/ hdfs://localhost/user/root
  */
 public class ListStatus {
     public static void main(String[] args) throws IOException {

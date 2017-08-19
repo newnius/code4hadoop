@@ -5,7 +5,7 @@ import java.io.IOException;
 /**
  * Created by newnius on 8/18/17.
  *
- * bin/hadoop jar /mnt/jars/hadoop-tutorial-1.0-SNAPSHOT.jar com.newnius.code4hadoop.pagerank.Main pagerank/input pagerank/output 5
+ * bin/hadoop jar code4hadoop-1.0.jar com.newnius.code4hadoop.pagerank.Main pagerank/input pagerank/output 5
  */
 public class Main {
     public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {

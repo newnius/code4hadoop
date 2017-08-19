@@ -8,6 +8,7 @@ import java.io.IOException;
 
 /**
  * Created by newnius on 8/19/17.
+ *
  */
 public class MapperCiteCountStat extends Mapper<Object, Text, Text, IntWritable> {
     private IntWritable one = new IntWritable(1);

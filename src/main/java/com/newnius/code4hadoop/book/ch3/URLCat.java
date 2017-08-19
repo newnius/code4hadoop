@@ -9,7 +9,7 @@ import java.net.URL;
 
 /**
  * Created by newnius on 12/7/16.
- * call: hadoop jar hadoop-tutorial.jar URLCat hdfs://localhost/user/root/input.txt
+ * call: hadoop jar code4hadoop-1.0.jar com.newnius.code4hadoop.book.ch3.URLCat hdfs://localhost/user/root/input.txt
  */
 public class URLCat {
     static{

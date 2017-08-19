@@ -11,7 +11,7 @@ import java.io.IOException;
 
 /**
  * Created by newnius on 12/6/16.
- * call: hadoop jar hadoop-tutorial.jar MaxTemperature input/ncdc_data/* outputpath
+ * call: hadoop jar code4hadoop-1.0.jar com.newnius.code4hadoop.book.ch2.MaxTemperature input/ncdc_data/* outputpath
  */
 public class MaxTemperature {
     public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {

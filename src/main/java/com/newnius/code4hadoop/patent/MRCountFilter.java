@@ -14,7 +14,7 @@ import java.io.IOException;
 /**
  * Created by newnius on 8/19/17.
  *
- * bin/hadoop jar /mnt/jars/hadoop-tutorial-1.0-SNAPSHOT.jar com.newnius.code4hadoop.patent.MRCountFilter patent/input/apat63_99.txt patent/output_count_filter year
+ * bin/hadoop jar code4hadoop-1.0.jar com.newnius.code4hadoop.patent.MRCountFilter patent/input/apat63_99.txt patent/output_count_filter year
  */
 public class MRCountFilter {
 

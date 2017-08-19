@@ -13,7 +13,7 @@ import java.io.IOException;
 /**
  * Created by newnius on 8/17/17.
  *
- * bin/hadoop jar /mnt/jars/hadoop-tutorial-1.0-SNAPSHOT.jar com.newnius.code4hadoop.invertedindex.MRTwo InvertedIndex inverted/input inverted/output2
+ * bin/hadoop jar code4hadoop-1.0.jar com.newnius.code4hadoop.invertedindex.MRTwo InvertedIndex inverted/input inverted/output2
  */
 public class MRTwo {
     public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {

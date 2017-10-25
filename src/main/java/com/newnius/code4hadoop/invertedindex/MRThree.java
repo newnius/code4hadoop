@@ -13,9 +13,9 @@ import java.io.IOException;
 /**
  * Created by newnius on 8/17/17.
  *
- * bin/hadoop jar code4hadoop-1.0.jar com.newnius.code4hadoop.invertedindex.MRTwo InvertedIndex inverted/input inverted/output2
+ * bin/hadoop jar code4hadoop-1.0.jar com.newnius.code4hadoop.invertedindex.MRThree InvertedIndex inverted/input inverted/output2
  */
-public class MRTwo {
+public class MRThree {
     public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
         if (args.length != 3) {
             System.err.println("Usage: <mr name> <input path> <output path>");
@@ -27,7 +27,7 @@ public class MRTwo {
         Configuration conf = new Configuration();
 
         Job job = Job.getInstance(conf, name);
-        job.setJarByClass(MRTwo.class);
+        job.setJarByClass(MRThree.class);
 
         //job.addCacheFile(new Path("inverted/skipwords.txt").toUri());
 

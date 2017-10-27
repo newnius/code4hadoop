@@ -38,9 +38,9 @@ public class ReducerFive extends Reducer<Text, IntWritable, Text, Text> {
 
         if(lastWord!=null && !word.equals(lastWord)){
             double IDF = totalDocs.get(pair[0]) / (docCount + 1);
-            IDF = Math.log(IDF);
-            //context.write(new Text(pair[0]+","+lastWord), new Text(String.valueOf(sum) + "-" + IDF));
-            context.write(new Text(pair[0]+","+lastWord), new Text(String.valueOf(sum) + "-" + totalDocs.get(pair[0])+"/"+(docCount+1) + "=" + IDF));
+            IDF = Math.log(IDF) / Math.log(2);
+
+            context.write(new Text(pair[0]+","+lastWord), new Text(String.valueOf(sum) + "-" + IDF));
             sum = 0;
             lastDoc = null;
             docCount = 0;

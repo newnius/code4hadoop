@@ -16,7 +16,6 @@ public class MapperThree extends Mapper<Object, Text, Text, IntWritable> {
     @Override
     protected void map(Object key, Text value, Context context) throws IOException, InterruptedException {
         String[] words= value.toString().split(" ");
-        String filename = ((FileSplit)context.getInputSplit()).getPath().getName();
         for (String word: words)
             context.write(new Text(word), new IntWritable(1));
     }

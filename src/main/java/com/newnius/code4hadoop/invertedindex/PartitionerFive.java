@@ -8,10 +8,10 @@ import org.apache.hadoop.mapreduce.lib.partition.HashPartitioner;
  * Created by newnius on 8/17/17.
  *
  */
-public class PartitionerTwo extends HashPartitioner<Text, IntWritable>{
+public class PartitionerFive extends HashPartitioner<Text, IntWritable>{
     @Override
     public int getPartition(Text key, IntWritable value, int numReduceTasks) {
-        String word = key.toString().split(",")[0];
+        String word = key.toString().substring(0, key.toString().lastIndexOf(","));
         return super.getPartition(new Text(word), value, numReduceTasks);
     }
 }

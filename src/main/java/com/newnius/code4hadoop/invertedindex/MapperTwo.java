@@ -4,6 +4,7 @@ import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
+import org.apache.hadoop.mapreduce.lib.input.FileSplit;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -18,28 +19,30 @@ import java.util.StringTokenizer;
  *
  */
 public class MapperTwo extends Mapper<Object, Text, Text, IntWritable> {
-    private Set<String> skipWords = new HashSet<>();
+//    private Set<String> skipWords = new HashSet<>();
 
     @Override
     protected void setup(Context context) throws IOException, InterruptedException {
-        URI[] uris = context.getCacheFiles();
-        for(URI uri: uris){
-            String line;
-            BufferedReader br = new BufferedReader(new FileReader(new Path(uri).getName()));
-            while((line = br.readLine()) != null){
-                StringTokenizer itr = new StringTokenizer(line);
-                while(itr.hasMoreTokens()){
-                    skipWords.add(itr.nextToken());
-                }
-            }
-        }
+//        URI[] uris = context.getCacheFiles();
+//        for(URI uri: uris){
+//            String line;
+//            BufferedReader br = new BufferedReader(new FileReader(new Path(uri).getName()));
+//            while((line = br.readLine()) != null){
+//                StringTokenizer itr = new StringTokenizer(line);
+//                while(itr.hasMoreTokens()){
+//                    skipWords.add(itr.nextToken());
+//                }
+//            }
+//        }
     }
 
     @Override
     protected void map(Object key, Text value, Context context) throws IOException, InterruptedException {
-        String[] fields= value.toString().split("\t");
-        if(!skipWords.contains(fields[3])) {
-            context.write(new Text(fields[3]+","+fields[2]), new IntWritable(1));
-        }
+        String[] words= value.toString().split(" ");
+        String filename = ((FileSplit)context.getInputSplit()).getPath().getName();
+        //if(!skipWords.contains(fields[3])) {
+        for (String word: words)
+            context.write(new Text(word + "," + filename), new IntWritable(1));
+        //}
     }
 }
